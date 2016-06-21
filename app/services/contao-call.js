@@ -2,7 +2,7 @@ import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
   host: 'http://www.selina-buechel.ch',
-  prefix: 'SimpleAjax.php?acid=ajaxrequest&',
+  prefix: 'SimpleAjax.php?auth=qw9a47twbo&',
   
   getElementsByArticle(articleId){
     var contaoURL = this.get('prefix') + "action=contentByArticle&id=" + articleId;
