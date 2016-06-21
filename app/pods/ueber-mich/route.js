@@ -6,7 +6,8 @@ export default Ember.Route.extend({
 
   model() {
 
-    var myresult = this.get('contao-call').getElementsByArticle(17);
+    var myresult = this.get('contao-call').getPages();
+    //var myresult = this.get('contao-call').getElementsByArticle(17);
     //var myresult = this.get('contao-call').getElementById(79);
     
     Ember.Logger.log(myresult);
