@@ -6,23 +6,23 @@ export default AjaxService.extend({
   
   getPages(){
     var contaoURL = this.get('prefix') + "action=pages";
-    var ajaxResult =  this.request(contaoURL);
+    var ajaxResultPromise =  this.request(contaoURL);
     
-    return ajaxResult;
+    return ajaxResultPromise;
   },
   
   getElementsByArticle(articleId){
     var contaoURL = this.get('prefix') + "action=contentByArticle&id=" + articleId;
-    var ajaxResult =  this.request(contaoURL);
+    var ajaxResultPromise =  this.request(contaoURL);
     
-    return ajaxResult;
+    return ajaxResultPromise;
   },
   
   getElementById(elementId){
     var contaoURL = this.get('prefix') + "action=contentById&id=" + elementId;
-    var ajaxResult =  this.request(contaoURL);
+    var ajaxResultPromise =  this.request(contaoURL);
     
-    return ajaxResult;
+    return ajaxResultPromise;
   }
   
 });
