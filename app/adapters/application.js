@@ -5,8 +5,16 @@ export default JSONAPIAdapter.extend({
       'Authorization': 'Basic YXBpLWtleTpxdzlhNDd0d2Jv'
     },
     host: 'http://www.selina-buechel.ch',
-    namespace: 'api/v1'
+    namespace: 'api/v1',
+    
+  //---------------------------------------------------------------------
+    // problem: there is a slash expected by server after collection name, 
+    //          else a redirect 301 will happen to "... collection/"
+    // solution: call the default buildURL and then append a slash
+    //---------------------------------------------------------------------
+    buildURL: function(type, id, record) {
+      return this._super(type, id, record) + '/';
+    }
     
 });
 
-//TODO: there is a slash expected by server after collection name, else a redirect 301 will happen to "... collection/"
