@@ -7,7 +7,9 @@ export default Ember.Route.extend({
   model() {
     var store = this.store;
     
-    var myresult = this.get('contao-call').getPages()
+    return store.findAll('contao-page');
+    
+    /*var myresult = this.get('contao-call').getPages()
                        .then(function(results){
                           results.forEach(function(page){
                             store.createRecord('contao-page', {
@@ -21,7 +23,7 @@ export default Ember.Route.extend({
                               type: page.type
                             });
                           })
-                       });
+                       });*/
     
     //var myresult = this.get('contao-call').getElementsByArticle(17);
     //var myresult = this.get('contao-call').getElementById(79);
