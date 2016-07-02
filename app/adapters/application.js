@@ -1,9 +1,10 @@
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
 
 export default JSONAPIAdapter.extend({
-    headers: {
+    /*headers: {
       'Authorization': 'Basic YXBpLWtleTpxdzlhNDd0d2Jv'
-    },
+    },*/
+    //TODO: bring in authorization
     host: 'http://www.selina-buechel.ch',
     namespace: 'api/v1',
     
