@@ -8,5 +8,6 @@ export default Model.extend({
   pid: attr('number'),
   sorting: attr('number'),
   title: attr('string'),
-  type: attr('string')
+  type: attr('string'),
+  hide: attr('number')
 });
