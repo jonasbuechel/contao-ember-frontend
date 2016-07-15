@@ -4,10 +4,10 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   alias: attr('string'),
+  title: attr('string'),
   layout: attr('number'),
   pid: attr('number'),
   sorting: attr('number'),
-  title: attr('string'),
   type: attr('string'),
   hide: attr('number')
 });
