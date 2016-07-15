@@ -1,0 +1,11 @@
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { belongsTo } from 'ember-data/relationships';
+
+export default Model.extend({
+  pid: attr('number'),
+  alias: attr('string'),
+  inColumn: attr('string'),
+  sorting: attr('number'),
+  contaoPage: belongsTo('contao-page')
+});
