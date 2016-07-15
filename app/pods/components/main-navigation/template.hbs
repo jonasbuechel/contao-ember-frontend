@@ -1,5 +1,5 @@
 <ul>
 {{#each model as |page|}}
-  <li>{{page.id}}{{page.alias}}</li>
+  <li>{{#link-to "index" page.alias}}{{page.alias}}{{/link-to}}</li>
 {{/each}}
 </ul>
